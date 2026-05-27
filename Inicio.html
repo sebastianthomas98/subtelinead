@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico: Línea D del Subte</title>
+    <!-- Cargamos Tailwind CSS para darle estilos fáciles de usar -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* El color verde exacto de la Línea D */
+        .bg-subte-verde {
+            background-color: #2E7D32;
+        }
+        .text-subte-verde {
+            color: #2E7D32;
+        }
+        .border-subte-verde {
+            border-color: #2E7D32;
+        }
+    </style>
+</head>
+<body class="bg-subte-verde text-white font-sans min-h-screen">
+
+    <!-- CONTENEDOR PRINCIPAL: Se adapta a celulares y se centra en computadoras -->
+    <main class="max-w-2xl mx-auto p-4 md:p-8 space-y-8">
+
+        <!-- ENCABEZADO (Header) -->
+        <header class="flex flex-col sm:flex-row justify-between items-center bg-black/10 p-6 rounded-2xl border border-white/10 gap-4">
+            <div class="flex items-center space-x-4">
+                <!-- Círculo con la letra D -->
+                <div class="w-16 h-16 bg-white text-subte-verde rounded-full flex items-center justify-center text-3xl font-bold shadow">
+                    D
+                </div>
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-bold">Línea D</h1>
+                    <p class="text-sm text-green-100">Catedral ↔ Congreso de Tucumán</p>
+                </div>
+            </div>
+            <!-- Estado del servicio -->
+            <div class="bg-white text-subte-verde px-4 py-2 rounded-lg text-sm font-bold shadow">
+                Estado: Normal
+            </div>
+        </header>
+
+        <!-- PRESENTACIÓN GENERAL -->
+        <section class="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-4">
+            <p class="text-sm sm:text-base leading-relaxed text-justify">
+                La Línea D del Subterráneo de Buenos Aires es una de las arterias más importantes y transitadas de la ciudad. Conecta la zona céntrica e histórica con los barrios residenciales y comerciales del norte de la capital, corriendo principalmente por debajo de las avenidas Córdoba, Santa Fe y Cabildo.
+            </p>
+            <p class="text-sm sm:text-base leading-relaxed text-justify">
+                A continuación, se detalla un informe completo con su radiografía operativa, cuadro tarifario actualizado y los puntos clave de su recorrido.
+            </p>
+        </section>
+
+        <!-- SECCIÓN 1: DATOS OPERATIVOS -->
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold border-b border-white/20 pb-2">1. Datos Operativos y Flujo de Pasajeros</h2>
+            <p class="text-sm text-green-100">
+                Es la segunda línea con mayor volumen de usuarios de toda la red de subtes.
+            </p>
+            
+            <!-- Tarjetas de datos rápidos -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-white text-subte-verde p-4 rounded-xl text-center shadow">
+                    <span class="block text-xs font-bold uppercase text-gray-500">Recorrido</span>
+                    <span class="text-lg font-bold">10.4 km</span>
+                </div>
+                <div class="bg-white text-subte-verde p-4 rounded-xl text-center shadow">
+                    <span class="block text-xs font-bold uppercase text-gray-500">Estaciones</span>
+                    <span class="text-lg font-bold">16 en total</span>
+                </div>
+                <div class="bg-white text-subte-verde p-4 rounded-xl text-center shadow">
+                    <span class="block text-xs font-bold uppercase text-gray-500">Pasajeros Diarios</span>
+                    <span class="text-lg font-bold">280k - 310k</span>
+                </div>
+            </div>
+
+            <!-- Caja de tecnología señales -->
+            <div class="bg-blue-900/30 border border-blue-400/30 p-4 rounded-xl text-sm">
+                <strong>Tecnología reciente (CBTC):</strong> Se instaló el sistema de señales modernizado <em>Communication Based Train Control</em>, lo que mejora mucho la frecuencia y seguridad de los trenes en horas pico de forma automática.
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CUADRO TARIFARIO (Estructurado en Columnas Sencillas) -->
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold border-b border-white/20 pb-2">2. Cuadro Tarifario (Tarifas de Viaje)</h2>
+            <p class="text-sm text-green-100">
+                La tarifa baja automáticamente según la cantidad de viajes que hagas en el mismo mes calendario usando la tarjeta SUBE registrada.
+            </p>
+
+            <!-- Columnas de tarifas usando rejilla (Grid) -->
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                
+                <!-- Tarjeta Tarifa 1 -->
+                <div class="bg-white text-gray-800 p-4 rounded-xl flex flex-col justify-between shadow border-b-4 border-subte-verde">
+                    <div>
+                        <span class="text-xs font-bold text-subte-verde uppercase">1 a 20 viajes</span>
+                        <h3 class="text-2xl font-black mt-1">$1.490</h3>
+                    </div>
+                    <div class="mt-3 pt-2 border-t text-[11px] text-gray-500">
+                        Sin registrar: <strong>$2.369,10</strong>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Tarifa 2 -->
+                <div class="bg-white text-gray-800 p-4 rounded-xl flex flex-col justify-between shadow border-b-4 border-subte-verde">
+                    <div>
+                        <span class="text-xs font-bold text-subte-verde uppercase">21 a 30 viajes</span>
+                        <h3 class="text-2xl font-black mt-1">$1.192</h3>
+                    </div>
+                    <div class="mt-3 pt-2 border-t text-[11px] text-gray-500">
+                        Sin registrar: <strong>$1.895,28</strong>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Tarifa 3 -->
+                <div class="bg-white text-gray-800 p-4 rounded-xl flex flex-col justify-between shadow border-b-4 border-subte-verde">
+                    <div>
+                        <span class="text-xs font-bold text-subte-verde uppercase">31 a 40 viajes</span>
+                        <h3 class="text-2xl font-black mt-1">$1.043</h3>
+                    </div>
+                    <div class="mt-3 pt-2 border-t text-[11px] text-gray-500">
+                        Sin registrar: <strong>$1.658,37</strong>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Tarifa 4 -->
+                <div class="bg-white text-gray-800 p-4 rounded-xl flex flex-col justify-between shadow border-b-4 border-yellow-500">
+                    <div>
+                        <span class="text-xs font-bold text-yellow-600 uppercase">41 viajes o más</span>
+                        <h3 class="text-2xl font-black mt-1">$894</h3>
+                    </div>
+                    <div class="mt-3 pt-2 border-t text-[11px] text-gray-500">
+                        Sin registrar: <strong>$1.421,46</strong>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MAPA GRÁFICO SENCILLO -->
+        <section class="space-y-4">
+            <h3 class="text-lg font-bold">Mapa visual del recorrido</h3>
+            <div class="bg-slate-900 p-6 rounded-2xl border border-white/10 text-center">
+                <!-- Simulación de línea de subte con CSS básico -->
+                <div class="relative w-full h-2 bg-blue-500 rounded my-6">
+                    <div class="absolute -top-2 left-0 w-6 h-6 bg-white border-4 border-blue-500 rounded-full" title="Catedral"></div>
+                    <div class="absolute -top-1 left-1/4 w-4 h-4 bg-white border-2 border-blue-500 rounded-full" title="Medicina"></div>
+                    <div class="absolute -top-1 left-2/4 w-4 h-4 bg-white border-2 border-blue-500 rounded-full" title="Plaza Italia"></div>
+                    <div class="absolute -top-1 left-3/4 w-4 h-4 bg-white border-2 border-blue-500 rounded-full" title="Juramento"></div>
+                    <div class="absolute -top-2 right-0 w-6 h-6 bg-white border-4 border-blue-500 rounded-full" title="Congreso de Tucumán"></div>
+                </div>
+                <div class="flex justify-between text-xs text-blue-200 px-1">
+                    <span>Terminal: Catedral</span>
+                    <span>Terminal: Congreso de Tucumán</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: GUÍA DE RECORRIDO POR ZONAS -->
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold border-b border-white/20 pb-2">3. Guía de Recorrido y Lugares de Interés</h2>
+            <p class="text-sm text-green-100">
+                La línea atraviesa zonas muy importantes de la Ciudad de Buenos Aires:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- Zona 1 -->
+                <div class="bg-white/5 p-5 rounded-xl border border-white/10 space-y-2">
+                    <h3 class="font-bold text-lg text-yellow-300">🏛️ Zona Centro e Histórica</h3>
+                    <ul class="text-xs space-y-2 text-green-50">
+                        <li><strong>Catedral:</strong> Da acceso a Plaza de Mayo, Casa Rosada y Cabildo. Combinaciones con Líneas A y E.</li>
+                        <li><strong>9 de Julio:</strong> Salida al Obelisco y al Teatro Colón. Combina con Líneas B y C.</li>
+                        <li><strong>Tribunales:</strong> Frente a Plaza Lavalle y el Palacio de Justicia.</li>
+                    </ul>
+                </div>
+
+                <!-- Zona 2 -->
+                <div class="bg-white/5 p-5 rounded-xl border border-white/10 space-y-2">
+                    <h3 class="font-bold text-lg text-yellow-300">🎓 Zona Universitaria y Médica</h3>
+                    <ul class="text-xs space-y-2 text-green-50">
+                        <li><strong>Facultad de Medicina:</strong> Acceso a facultades de la UBA, Hospital de Clínicas y Plaza Houssay.</li>
+                        <li><strong>Pueyrredón:</strong> Gran zona de compras sobre Av. Santa Fe. Conexión directa con la Línea H.</li>
+                    </ul>
+                </div>
+
+                <!-- Zona 3 -->
+                <div class="bg-white/5 p-5 rounded-xl border border-white/10 space-y-2">
+                    <h3 class="font-bold text-lg text-yellow-300">🌳 Zona Palermo y Cultural</h3>
+                    <ul class="text-xs space-y-2 text-green-50">
+                        <li><strong>Agüero & Bulnes:</strong> Bulnes tiene entrada directa al shopping Alto Palermo.</li>
+                        <li><strong>Plaza Italia:</strong> Cerca del Ecoparque, el Jardín Botánico, La Rural y Palermo Soho.</li>
+                        <li><strong>Palermo:</strong> Conecta con el Tren San Martín y Metrobús Juan B. Justo.</li>
+                    </ul>
+                </div>
+
+                <!-- Zona 4 -->
+                <div class="bg-white/5 p-5 rounded-xl border border-white/10 space-y-2">
+                    <h3 class="font-bold text-lg text-yellow-300">🏢 Zona Belgrano y Núñez</h3>
+                    <ul class="text-xs space-y-2 text-green-50">
+                        <li><strong>Olleros:</strong> Acceso al barrio residencial de Colegiales y embajadas.</li>
+                        <li><strong>Juramento:</strong> Centro comercial de Belgrano, Plaza Belgrano e iglesia "La Redonda".</li>
+                        <li><strong>Congreso de Tucumán:</strong> Estación terminal norte con conexión directa al Metrobús Norte.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: DATOS CURIOSOS -->
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold border-b border-white/20 pb-2">4. Datos Curiosos y Relevantes</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                    <h3 class="font-bold mb-1">🎨 Patrimonio Cultural</h3>
+                    <p class="text-xs text-green-100">
+                        Muchas de sus estaciones originales (como Catedral o Palermo) están decoradas con murales de los años 1930 y 1940 que reflejan paisajes históricos argentinos, declarados Monumento Histórico Nacional.
+                    </p>
+                </div>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                    <h3 class="font-bold mb-1">🚇 Flota de Trenes Moderna</h3>
+                    <p class="text-xs text-green-100">
+                        Cuenta principalmente con formaciones Alstom (series 100 y 300) equipadas con aire acondicionado, lo que mejora drásticamente el confort durante los viajes en verano.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: LISTADO DE LAS 16 PARADAS -->
+        <section class="space-y-6">
+            <h2 class="text-xl font-bold border-b border-white/20 pb-2">5. Listado Detallado de Estaciones</h2>
+            <div class="flex flex-col space-y-3">
+                
+                <!-- Estación 1 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        1
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Catedral - Terminal</h4>
+                        <p class="text-xs text-green-200">Combinación con Líneas A y E • Ascensor • Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 2 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        2
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">9 de Julio</h4>
+                        <p class="text-xs text-green-200">Combinación con Líneas B y C • Ascensor • Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 3 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        3
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Tribunales</h4>
+                        <p class="text-xs text-green-200">Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 4 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        4
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Callao</h4>
+                        <p class="text-xs text-green-200">Ascensor • Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 5 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        5
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Facultad de Medicina</h4>
+                        <p class="text-xs text-green-200">Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 6 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        6
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Pueyrredón</h4>
+                        <p class="text-xs text-green-200">Combinación con Línea H • Ascensor • Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 7 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        7
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Agüero</h4>
+                        <p class="text-xs text-green-200">Ascensor • Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 8 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        8
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Bulnes</h4>
+                        <p class="text-xs text-green-200">Ascensor • Rampa • Conexión Alto Palermo</p>
+                    </div>
+                </div>
+
+                <!-- Estación 9 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        9
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Scalabrini Ortiz</h4>
+                        <p class="text-xs text-green-200">Sin accesibilidad (Sólo escaleras)</p>
+                    </div>
+                </div>
+
+                <!-- Estación 10 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        10
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Plaza Italia</h4>
+                        <p class="text-xs text-green-200">Ascensor • Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 11 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        11
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Palermo</h4>
+                        <p class="text-xs text-green-200">Combinación con Tren San Martín • Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 12 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        12
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Ministro Carranza</h4>
+                        <p class="text-xs text-green-200">Combinación con Tren Mitre • Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 13 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        13
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Olleros</h4>
+                        <p class="text-xs text-green-200">Ascensor • Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 14 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        14
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">José Hernández</h4>
+                        <p class="text-xs text-green-200">Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 15 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        15
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Juramento</h4>
+                        <p class="text-xs text-green-200">Ascensor • Rampa</p>
+                    </div>
+                </div>
+
+                <!-- Estación 16 -->
+                <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
+                    <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
+                        16
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Congreso de Tucumán</h4>
+                        <p class="text-xs text-green-200">Terminal • Ascensor • Rampa</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (Footer) -->
+    <footer class="w-full bg-white text-subte-verde text-center py-6 mt-12 shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
+        <p class="font-bold text-sm">MetroLink — Trabajo Práctico de Consultoría</p>
+        <p class="text-xs opacity-80 mt-1">Línea D · Red de Subterráneos de Buenos Aires · © 2026</p>
+    </footer>
+
+</body>
+</html>
