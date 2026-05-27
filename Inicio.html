@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo Práctico: Línea D del Subte</title>
-    <!-- Cargamos Tailwind CSS para darle estilos fáciles de usar -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* El color verde exacto de la Línea D */
@@ -21,10 +20,9 @@
 </head>
 <body class="bg-subte-verde text-white font-sans min-h-screen">
 
-    <!-- CONTENEDOR PRINCIPAL: Se adapta a celulares y se centra en computadoras -->
     <main class="max-w-2xl mx-auto p-4 md:p-8 space-y-8">
 
-        <!-- ENCABEZADO (Header) -->
+        
         <header class="flex flex-col sm:flex-row justify-between items-center bg-black/10 p-6 rounded-2xl border border-white/10 gap-4">
             <div class="flex items-center space-x-4">
                 <!-- Círculo con la letra D -->
@@ -36,13 +34,13 @@
                     <p class="text-sm text-green-100">Catedral ↔ Congreso de Tucumán</p>
                 </div>
             </div>
-            <!-- Estado del servicio -->
+            
             <div class="bg-white text-subte-verde px-4 py-2 rounded-lg text-sm font-bold shadow">
                 Estado: Normal
             </div>
         </header>
 
-        <!-- PRESENTACIÓN GENERAL -->
+        
         <section class="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-4">
             <p class="text-sm sm:text-base leading-relaxed text-justify">
                 La Línea D del Subterráneo de Buenos Aires es una de las arterias más importantes y transitadas de la ciudad. Conecta la zona céntrica e histórica con los barrios residenciales y comerciales del norte de la capital, corriendo principalmente por debajo de las avenidas Córdoba, Santa Fe y Cabildo.
@@ -52,14 +50,14 @@
             </p>
         </section>
 
-        <!-- SECCIÓN 1: DATOS OPERATIVOS -->
+        
         <section class="space-y-4">
             <h2 class="text-xl font-bold border-b border-white/20 pb-2">1. Datos Operativos y Flujo de Pasajeros</h2>
             <p class="text-sm text-green-100">
                 Es la segunda línea con mayor volumen de usuarios de toda la red de subtes.
             </p>
             
-            <!-- Tarjetas de datos rápidos -->
+            
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div class="bg-white text-subte-verde p-4 rounded-xl text-center shadow">
                     <span class="block text-xs font-bold uppercase text-gray-500">Recorrido</span>
@@ -75,23 +73,23 @@
                 </div>
             </div>
 
-            <!-- Caja de tecnología señales -->
+            
             <div class="bg-blue-900/30 border border-blue-400/30 p-4 rounded-xl text-sm">
                 <strong>Tecnología reciente (CBTC):</strong> Se instaló el sistema de señales modernizado <em>Communication Based Train Control</em>, lo que mejora mucho la frecuencia y seguridad de los trenes en horas pico de forma automática.
             </div>
         </section>
 
-        <!-- SECCIÓN 2: CUADRO TARIFARIO (Estructurado en Columnas Sencillas) -->
+        
         <section class="space-y-4">
             <h2 class="text-xl font-bold border-b border-white/20 pb-2">2. Cuadro Tarifario (Tarifas de Viaje)</h2>
             <p class="text-sm text-green-100">
                 La tarifa baja automáticamente según la cantidad de viajes que hagas en el mismo mes calendario usando la tarjeta SUBE registrada.
             </p>
 
-            <!-- Columnas de tarifas usando rejilla (Grid) -->
+            
             <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
                 
-                <!-- Tarjeta Tarifa 1 -->
+                
                 <div class="bg-white text-gray-800 p-4 rounded-xl flex flex-col justify-between shadow border-b-4 border-subte-verde">
                     <div>
                         <span class="text-xs font-bold text-subte-verde uppercase">1 a 20 viajes</span>
@@ -102,7 +100,7 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta Tarifa 2 -->
+                
                 <div class="bg-white text-gray-800 p-4 rounded-xl flex flex-col justify-between shadow border-b-4 border-subte-verde">
                     <div>
                         <span class="text-xs font-bold text-subte-verde uppercase">21 a 30 viajes</span>
@@ -113,7 +111,7 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta Tarifa 3 -->
+                
                 <div class="bg-white text-gray-800 p-4 rounded-xl flex flex-col justify-between shadow border-b-4 border-subte-verde">
                     <div>
                         <span class="text-xs font-bold text-subte-verde uppercase">31 a 40 viajes</span>
@@ -124,7 +122,7 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta Tarifa 4 -->
+                
                 <div class="bg-white text-gray-800 p-4 rounded-xl flex flex-col justify-between shadow border-b-4 border-yellow-500">
                     <div>
                         <span class="text-xs font-bold text-yellow-600 uppercase">41 viajes o más</span>
@@ -166,7 +164,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 
-                <!-- Zona 1 -->
+                
                 <div class="bg-white/5 p-5 rounded-xl border border-white/10 space-y-2">
                     <h3 class="font-bold text-lg text-yellow-300">🏛️ Zona Centro e Histórica</h3>
                     <ul class="text-xs space-y-2 text-green-50">
@@ -176,7 +174,7 @@
                     </ul>
                 </div>
 
-                <!-- Zona 2 -->
+                
                 <div class="bg-white/5 p-5 rounded-xl border border-white/10 space-y-2">
                     <h3 class="font-bold text-lg text-yellow-300">🎓 Zona Universitaria y Médica</h3>
                     <ul class="text-xs space-y-2 text-green-50">
@@ -185,7 +183,7 @@
                     </ul>
                 </div>
 
-                <!-- Zona 3 -->
+                
                 <div class="bg-white/5 p-5 rounded-xl border border-white/10 space-y-2">
                     <h3 class="font-bold text-lg text-yellow-300">🌳 Zona Palermo y Cultural</h3>
                     <ul class="text-xs space-y-2 text-green-50">
@@ -195,7 +193,7 @@
                     </ul>
                 </div>
 
-                <!-- Zona 4 -->
+                
                 <div class="bg-white/5 p-5 rounded-xl border border-white/10 space-y-2">
                     <h3 class="font-bold text-lg text-yellow-300">🏢 Zona Belgrano y Núñez</h3>
                     <ul class="text-xs space-y-2 text-green-50">
@@ -208,7 +206,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 4: DATOS CURIOSOS -->
+        
         <section class="space-y-4">
             <h2 class="text-xl font-bold border-b border-white/20 pb-2">4. Datos Curiosos y Relevantes</h2>
             
@@ -228,12 +226,12 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 5: LISTADO DE LAS 16 PARADAS -->
+        
         <section class="space-y-6">
             <h2 class="text-xl font-bold border-b border-white/20 pb-2">5. Listado Detallado de Estaciones</h2>
             <div class="flex flex-col space-y-3">
                 
-                <!-- Estación 1 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         1
@@ -244,7 +242,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 2 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         2
@@ -255,7 +253,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 3 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         3
@@ -266,7 +264,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 4 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         4
@@ -277,7 +275,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 5 -->
+               
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         5
@@ -288,7 +286,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 6 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         6
@@ -299,7 +297,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 7 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         7
@@ -310,7 +308,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 8 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         8
@@ -321,7 +319,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 9 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         9
@@ -332,7 +330,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 10 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         10
@@ -343,7 +341,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 11 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         11
@@ -354,7 +352,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 12 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         12
@@ -365,7 +363,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 13 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         13
@@ -376,7 +374,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 14 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         14
@@ -387,7 +385,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 15 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         15
@@ -398,7 +396,7 @@
                     </div>
                 </div>
 
-                <!-- Estación 16 -->
+                
                 <div class="flex items-center space-x-3 bg-white/5 p-3 rounded-lg border border-white/5">
                     <div class="w-8 h-8 bg-white text-subte-verde rounded-full flex items-center justify-center font-bold text-sm">
                         16
@@ -414,9 +412,9 @@
 
     </main>
 
-    <!-- PIE DE PÁGINA (Footer) -->
+    
     <footer class="w-full bg-white text-subte-verde text-center py-6 mt-12 shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
-        <p class="font-bold text-sm">MetroLink — Trabajo Práctico de Consultoría</p>
+        <p class="font-bold text-sm">MetroLink </p>
         <p class="text-xs opacity-80 mt-1">Línea D · Red de Subterráneos de Buenos Aires · © 2026</p>
     </footer>
 
